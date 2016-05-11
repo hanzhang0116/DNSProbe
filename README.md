@@ -23,12 +23,11 @@ Next step work is to continouslly run this program to probe the top 100 Alaxa do
     * time TIMESTAMP NOT NULL
 
 2. Usage:
-Options:
 	* -f, specify the frequency in seconds to probe the domains
 	* -d, specify the file that includes the domains to probe
 
 3. Compile and Run Examples:
-  Compile: 
-    g++ -std=c++11 -o DNSProbe DNSProbe.cpp -I/usr/local/include/mysql++ -I/usr/local/include/mysql/ -lldns -lmysqlpp -lmysqlclient -lm -lboost_system -lboost_date_time
-  Run:
+  * Compile: 
+     g++ -std=c++11 -o DNSProbe DNSProbe.cpp -I/usr/local/include/mysql++ -I/usr/local/include/mysql/ -lldns -lmysqlpp -lmysqlclient -lm -lboost_system -lboost_date_time
+  * Run:
     ./DNSProbeWork -f 300 -d domainFile
