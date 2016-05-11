@@ -29,6 +29,6 @@ Options:
 
 3. Compile and Run Examples:
   Compile: 
-    g++ -std=c++11 -o DNSProbe DNSProbe.cpp -lldns -lmysqlpp -I/usr/local/include/mysql++ -I/usr/local/include/mysql/ -lmysqlclient -lm -lboost_system -lboost_date_time
+    g++ -std=c++11 -o DNSProbe DNSProbe.cpp -I/usr/local/include/mysql++ -I/usr/local/include/mysql/ -lldns -lmysqlpp -lmysqlclient -lm -lboost_system -lboost_date_time
   Run:
     ./DNSProbeWork -f 300 -d domainFile
