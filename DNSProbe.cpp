@@ -254,19 +254,6 @@ int domainQuery(string domainToQuery, ldns_resolver *resolver, mysqlpp::Connecti
 		int ms = std::chrono::duration_cast<std::chrono::milliseconds>(dur).count();
 		updateDB(ms, domainToQuery, conn);
 		ldns_pkt_free(pkt);
-		/*
-		//we do not care about the responses
-		// retrieve the A records
-		ldns_rr_list *records;
-		records = ldns_pkt_rr_list_by_type(pkt,
-						LDNS_RR_TYPE_A,
-						LDNS_SECTION_ANSWER);
-		if(!records){
-		}
-		else{
-			ldns_rr_list_deep_free(records);
-		}
-		*/
 	}  
 	ldns_rdf_deep_free(domain);
 	return 0;
